@@ -1,0 +1,233 @@
+[gd_scene load_steps=19 format=3 uid="uid://c4o36vv3n70ux"]
+
+[ext_resource type="Script" path="res://Rom/rom_main_0.gd" id="1_ej2vi"]
+[ext_resource type="PackedScene" uid="uid://bp5axmk3lluhr" path="res://Object/obj_player.tscn" id="2_fyom7"]
+[ext_resource type="Texture2D" uid="uid://cugjh0iay7qdj" path="res://Sprite/spr_bg_line.png" id="2_jytn8"]
+[ext_resource type="PackedScene" uid="uid://dpbaug2ux5je5" path="res://Object/obj_finline.tscn" id="2_mo4tk"]
+[ext_resource type="FontFile" uid="uid://dratum2s1ief6" path="res://Moneygraphy-Rounded.ttf" id="2_udqm6"]
+[ext_resource type="Texture2D" uid="uid://br4iaodfewk37" path="res://Sprite/spr_bg_end.png" id="3_m3myx"]
+[ext_resource type="Shader" path="res://Shader/sh_fast.gdshader" id="4_8jlek"]
+[ext_resource type="Texture2D" uid="uid://blk6begg3llvr" path="res://Sprite/spr_bg_grass1.png" id="6_7grbi"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_wlcfs"]
+shader = ExtResource("4_8jlek")
+
+[sub_resource type="LabelSettings" id="LabelSettings_oonrv"]
+font = ExtResource("2_udqm6")
+outline_size = 8
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_e4fi7"]
+font = ExtResource("2_udqm6")
+outline_size = 8
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_illdb"]
+font = ExtResource("2_udqm6")
+outline_size = 8
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_77fvf"]
+font = ExtResource("2_udqm6")
+outline_size = 8
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_rklut"]
+font = ExtResource("2_udqm6")
+outline_size = 8
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_cmkba"]
+font = ExtResource("2_udqm6")
+outline_size = 8
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_8nxdl"]
+font = ExtResource("2_udqm6")
+outline_size = 8
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_wcg0p"]
+font = ExtResource("2_udqm6")
+font_size = 32
+outline_size = 8
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_uxijx"]
+font = ExtResource("2_udqm6")
+outline_size = 8
+outline_color = Color(0, 0, 0, 1)
+
+[node name="rom_main" type="Node2D"]
+script = ExtResource("1_ej2vi")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(400, 225)
+zoom = Vector2(2, 2)
+
+[node name="SprBgLine" type="Sprite2D" parent="."]
+position = Vector2(400, 183.5)
+scale = Vector2(1, 0.0822222)
+texture = ExtResource("2_jytn8")
+
+[node name="SprBgLine" type="Sprite2D" parent="SprBgLine"]
+position = Vector2(0, 1453.38)
+texture = ExtResource("2_jytn8")
+
+[node name="SprBgLine2" type="Sprite2D" parent="SprBgLine"]
+position = Vector2(800, 198.588)
+scale = Vector2(1, 0.00676049)
+texture = ExtResource("2_jytn8")
+
+[node name="SprBgLine3" type="Sprite2D" parent="SprBgLine"]
+position = Vector2(-1, 2912.84)
+texture = ExtResource("2_jytn8")
+
+[node name="SprBgEnd" type="Sprite2D" parent="."]
+position = Vector2(740.993, 218.228)
+rotation = 1.5708
+scale = Vector2(0.606179, 0.172935)
+texture = ExtResource("3_m3myx")
+
+[node name="SprBgGrass1" type="Sprite2D" parent="."]
+position = Vector2(449, 391)
+scale = Vector2(0.03, 0.03)
+texture = ExtResource("6_7grbi")
+
+[node name="SprBgGrass1" type="Sprite2D" parent="SprBgGrass1"]
+position = Vector2(-11333.3, -1933.34)
+texture = ExtResource("6_7grbi")
+
+[node name="SprBgGrass2" type="Sprite2D" parent="SprBgGrass1"]
+position = Vector2(4366.67, -12266.7)
+scale = Vector2(-1, 1)
+texture = ExtResource("6_7grbi")
+
+[node name="SprBgGrass3" type="Sprite2D" parent="SprBgGrass1"]
+position = Vector2(6366.67, 1900)
+scale = Vector2(1, 1)
+texture = ExtResource("6_7grbi")
+
+[node name="SprBgGrass4" type="Sprite2D" parent="SprBgGrass1"]
+position = Vector2(-7800, -4633.34)
+scale = Vector2(1, 1)
+texture = ExtResource("6_7grbi")
+
+[node name="SprBgGrass5" type="Sprite2D" parent="SprBgGrass1"]
+position = Vector2(8500, -5466.67)
+scale = Vector2(1, 1)
+texture = ExtResource("6_7grbi")
+
+[node name="SprBgGrass6" type="Sprite2D" parent="SprBgGrass1"]
+position = Vector2(-10333.3, -10600)
+scale = Vector2(-1, 1)
+texture = ExtResource("6_7grbi")
+
+[node name="obj_finline" parent="." instance=ExtResource("2_mo4tk")]
+position = Vector2(740, 2)
+
+[node name="obj_player0" parent="." instance=ExtResource("2_fyom7")]
+material = SubResource("ShaderMaterial_wlcfs")
+position = Vector2(10, 125)
+
+[node name="obj_player1" parent="." instance=ExtResource("2_fyom7")]
+position = Vector2(10, 185)
+line = 1
+
+[node name="obj_player2" parent="." instance=ExtResource("2_fyom7")]
+position = Vector2(10, 245)
+line = 2
+
+[node name="obj_player3" parent="." instance=ExtResource("2_fyom7")]
+position = Vector2(10, 305)
+line = 3
+
+[node name="obj_player4" parent="." instance=ExtResource("2_fyom7")]
+position = Vector2(10, 365)
+line = 4
+
+[node name="Label_sys0" type="Label" parent="."]
+visible = false
+offset_left = 300.0
+offset_top = 10.0
+offset_right = 371.0
+offset_bottom = 33.0
+text = "달팽이 수: "
+label_settings = SubResource("LabelSettings_oonrv")
+
+[node name="Label_rank" type="Label" parent="."]
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 193.0
+offset_bottom = 137.0
+text = "1등
+2등
+3등
+4등
+5등"
+label_settings = SubResource("LabelSettings_e4fi7")
+
+[node name="Label3" type="Label" parent="Label_rank"]
+layout_mode = 0
+offset_left = 35.0
+offset_right = 310.0
+offset_bottom = 23.0
+label_settings = SubResource("LabelSettings_illdb")
+
+[node name="Label2" type="Label" parent="Label_rank"]
+layout_mode = 0
+offset_left = 35.0
+offset_top = 21.0
+offset_right = 328.0
+offset_bottom = 44.0
+label_settings = SubResource("LabelSettings_77fvf")
+
+[node name="Label1" type="Label" parent="Label_rank"]
+layout_mode = 0
+offset_left = 35.0
+offset_top = 42.0
+offset_right = 356.0
+offset_bottom = 65.0
+label_settings = SubResource("LabelSettings_rklut")
+
+[node name="Label0" type="Label" parent="Label_rank"]
+layout_mode = 0
+offset_left = 35.0
+offset_top = 63.0
+offset_right = 368.0
+offset_bottom = 86.0
+label_settings = SubResource("LabelSettings_cmkba")
+
+[node name="Label4" type="Label" parent="Label_rank"]
+layout_mode = 0
+offset_left = 35.0
+offset_top = 84.0
+offset_right = 353.0
+offset_bottom = 107.0
+label_settings = SubResource("LabelSettings_8nxdl")
+
+[node name="LineEdit" type="LineEdit" parent="."]
+visible = false
+offset_top = 419.0
+offset_right = 603.0
+offset_bottom = 450.0
+
+[node name="Label_end" type="Label" parent="."]
+visible = false
+offset_left = 371.0
+offset_top = 16.0
+offset_right = 429.0
+offset_bottom = 52.0
+text = "결과"
+label_settings = SubResource("LabelSettings_wcg0p")
+
+[node name="Label_list" type="Label" parent="Label_end"]
+layout_mode = 0
+offset_left = -371.0
+offset_top = 38.0
+offset_right = 429.0
+offset_bottom = 434.0
+label_settings = SubResource("LabelSettings_uxijx")
+horizontal_alignment = 1
+
+[connection signal="text_submitted" from="LineEdit" to="." method="_on_line_edit_text_submitted"]

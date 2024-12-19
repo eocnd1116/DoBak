@@ -1,0 +1,52 @@
+[gd_scene load_steps=8 format=3 uid="uid://bp5axmk3lluhr"]
+
+[ext_resource type="Script" path="res://Object/obj_player_0.gd" id="1_m3qna"]
+[ext_resource type="FontFile" uid="uid://dratum2s1ief6" path="res://Moneygraphy-Rounded.ttf" id="2_onrbh"]
+[ext_resource type="Texture2D" uid="uid://vtk7eqp7yba5" path="res://Sprite/spr_player.png" id="3_2k6x6"]
+[ext_resource type="Shader" path="res://Shader/sh_outline.gdshader" id="3_007iv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iuc0n"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_tx3sd"]
+resource_local_to_scene = true
+shader = ExtResource("3_007iv")
+shader_parameter/line_color = Color(0, 0, 0, 1)
+shader_parameter/line_thickness = 1.0
+
+[sub_resource type="LabelSettings" id="LabelSettings_0yxxa"]
+font = ExtResource("2_onrbh")
+font_size = 14
+outline_size = 6
+outline_color = Color(0, 0, 0, 1)
+
+[node name="obj_player" type="CharacterBody2D"]
+script = ExtResource("1_m3qna")
+
+[node name="solid" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="solid"]
+position = Vector2(87, 62)
+shape = SubResource("RectangleShape2D_iuc0n")
+
+[node name="sprite2" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_tx3sd")
+position = Vector2(62, 49)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("3_2k6x6")
+
+[node name="sprite" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_tx3sd")
+position = Vector2(62, 49)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("3_2k6x6")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 1.00001
+offset_top = 16.0
+offset_right = 108.0
+offset_bottom = 39.0
+text = "달팽이"
+label_settings = SubResource("LabelSettings_0yxxa")
+horizontal_alignment = 1
+
+[connection signal="area_entered" from="solid" to="." method="_on_solid_area_entered"]

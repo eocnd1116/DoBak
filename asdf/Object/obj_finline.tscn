@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://dpbaug2ux5je5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_eplyk"]
+size = Vector2(48, 450)
+
+[node name="obj_finline" type="StaticBody2D"]
+position = Vector2(400, 225)
+
+[node name="solid" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="solid"]
+position = Vector2(24, 225)
+shape = SubResource("RectangleShape2D_eplyk")
+metadata/_edit_group_ = true
